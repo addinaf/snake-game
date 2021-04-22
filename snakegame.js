@@ -117,7 +117,7 @@ const moveSnake = () => {
     clearInterval(moveSnakeInterval);
     if (
       !alert(
-        `You have ate ${totalFoodAte} food by travelling ${totalDistanceTravelled} blocks.`
+        `Oops! 🤭 You have ate ${totalFoodAte} dots by travelling ${totalDistanceTravelled} pixels 🐍`
       )
     )
       window.location.reload();
