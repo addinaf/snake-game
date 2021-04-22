@@ -1,0 +1,25 @@
+:root {
+  --dark-brown: #9d8189;
+  --dark-pink: #f4acb7;
+  --light-pink: #ffcad4;
+  --lightest: #ffe5d9;
+  --minty: #d8e2dc;
+  --text-font: "Quicksand", sans-serif;
+}
+
+body {
+  background: var(--lightest);
+  text-align: center;
+  font-family: var(--text-font);
+  color: var(--dark-brown);
+  align-content: center;
+}
+
+#gameContainer {
+  width: 400px;
+  height: 400px;
+  background-color: var(--light-pink);
+  border: solid;
+  border-color: var(--dark-pink);
+  border-radius: 20px;
+}
