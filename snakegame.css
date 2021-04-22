@@ -15,11 +15,129 @@ body {
   align-content: center;
 }
 
+p {
+  font-family: var(--text-font);
+  color: var(--dark-brown);
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+p.score {
+  font-family: var(--text-font);
+  font-size: 18px;
+  color: var(--lightest);
+}
+
+a {
+  color: var(--dark-pink);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--dark-pink);
+}
+
+a:visited {
+  color: var(--dark-pink);
+}
+/*GAME BOARD STYLES*/
 #gameContainer {
-  width: 400px;
-  height: 400px;
-  background-color: var(--light-pink);
-  border: solid;
+  width: 40vw;
+  height: 40vw;
+  margin: 2vw auto;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  background-color: var(--dark-brown);
+  border: solid 5px;
   border-color: var(--dark-pink);
-  border-radius: 20px;
+  border-radius: 25px;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+
+.gameBoardPixel {
+  width: 1vw;
+  height: 1vw;
+  border-radius: 2px;
+  float: left;
+}
+
+/*SNAKE STYLES*/
+.snakeBodyPixel {
+  background-color: var(--light-pink);
+}
+
+/*FOOD STYLES*/
+.food {
+  background-color: var(--minty);
+}
+
+/*SCORE STYLES*/
+#scoreContainer {
+  width: 40vw;
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+}
+
+.scoreBoard {
+  border-radius: 25px;
+  border: solid 5px var(--dark-pink);
+  background-color: var(--dark-brown);
+  display: inline-block;
+  width: 150px;
+  padding-top: 5px;
+  margin-left: 10px;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+
+/* Hide #onScreenControllers on desktop */
+#onScreenControllers {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  #gameContainer {
+    width: 800px;
+    height: 800px;
+  }
+
+  .gameBoardPixel {
+    width: 20px;
+    height: 20px;
+  }
+
+  .scoreContainer {
+    width: 800px;
+  }
+
+  #onScreenControllers {
+    width: 800px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  #onSCreenControllers > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #onScreenControllers button {
+    background-color: transparent;
+    height: 200px;
+    width: 200px;
+    font-size: 80px;
+    border: none;
+  }
+
+  #onScreenControllers button:focus {
+    outline: none;
+  }
+
+  #onScreenControllers button:active {
+    background-color: var(--dark-brown);
+  }
 }
